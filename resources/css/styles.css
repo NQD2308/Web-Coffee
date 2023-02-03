@@ -1,0 +1,525 @@
+/* --------------------------------------------- */
+/* -------------- DEFAULT SETTING -------------- */
+/* --------------------------------------------- */
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Playfair Display SC', serif;
+    font-size: 20px;
+    color: #7a431d;
+    background-color: rgb(226, 154, 61);
+    text-rendering: optimizeLegibility;
+}
+
+
+/* --------------------------------------------- */
+/* ------------ REUSABLE COMPONENT ------------- */
+/* --------------------------------------------- */
+section{
+    padding: 40px;
+}
+
+.btn{
+    text-decoration: none;
+    color: rgb(86,55,39);
+    background-color: rgb(222,158,72);
+    padding: 15px 25px;
+    margin: 30px;
+    border-radius: 20px;
+    transition: all .3s;
+    margin-right: 40px;
+}
+
+.btn:hover,
+.btn:active{
+    background-color: rgb(216, 139, 51);
+    color: #FFFFFF;
+}
+
+.clearfix::after{
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto; 
+}
+
+h2, h3{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h3{
+    color: #372C2E;
+    font-size: 180%;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h3:after{
+    content: " ";
+    display: block;
+    width: 150px;
+    height: 3px;
+    background-color: #563727;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.p-long{
+    text-align: center;
+    color: #7a431d;
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 82%;
+    margin-left: 9%;
+    line-height: 140%;
+}
+
+.small-icon{
+    color: #7a431d;
+    padding-right: 10px;
+}
+
+/* --------------------------------------------- */
+/* ---------------- HEADER --------------------- */
+/* --------------------------------------------- */
+header{
+    background-image: linear-gradient(rgba(122,67,29,0.100),rgba(222,158,72,0.85)), url("../img/CoffeeAndJazz_resized.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 75vh; /* view height */
+    background-attachment: fixed;
+}
+
+.logo{
+    color: #563727;
+    position: absolute;
+    float: left;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+
+.heading-main-text{
+    color: rgb(86,55,39);
+    position: absolute;
+    top: 35%;
+    left: 8%;
+    font-size: 270%;
+}
+
+.bottom{
+    position: absolute;
+    top: 51%;
+    left: 8%;
+    margin: 50px;
+    margin-top: 65px;
+}
+
+.main-nav{
+    float: right ;
+    list-style: none;
+    margin-right: 30px;
+    margin-top: 40px;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.main-nav li a{
+    text-decoration: none;      /* Lệnh loại bỏ dấu gạch chân */
+    color: rgb(224, 176, 120);
+    font-weight: 700;
+    font-size: 110%;
+    padding: 3px;
+}
+
+.main-nav li a:hover,   /* Lệnh di chuột giữa các hiệu ứng */
+.main-nav li a:active{
+    border-bottom: 2px solid rgb(219, 160, 92); 
+    transition: border-bottom 0.1s;
+}/* Lệnh click chuột */
+
+.about-pic{
+    position: relative;
+    margin-top: 50px;
+}
+
+.about-pic img{
+    width: 93%;
+    border-radius: 20px;
+    border: 4px solid #9c4519;
+    box-shadow: 8px 8px 12px 1px #202020 ;
+    transition: all .4s;
+    /* x-y-độ mờ-độ rộng-màu */
+}
+
+.pic-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #DE9E48;
+    transform: translate(-50%,100%);
+    opacity: 0;
+    transition: all .4s;
+}
+
+.about-pic:hover img,
+.about-pic:active img{
+    filter: blur(2px) brightness(50%);
+}
+
+.about-pic:hover .pic-title,
+.about-pic:active .pic-title{
+    transform: translate(-50%,-50%);
+    opacity: 1;
+}
+
+
+
+/* --------------------------------------------- */
+/* ---------------- MENU SECTION --------------- */
+/* --------------------------------------------- */
+
+.menu-section{
+    background-image: linear-gradient(rgba(122,67,29,0.8),rgba(222,158,72,0.85)), url("../img/viewnemu.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.menu-section h3{
+    margin-bottom: 40px;
+}
+
+.menu-box{
+    background-color: #dba967;
+    width: 70%;
+    height: 420px;
+    border-radius: 20px;
+    border: 4px solid #9c4519;
+}
+
+.kindofmenu{
+    background-color: #e2a04a;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #9c4519;
+}
+
+.menu-box li{
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    list-style: none;
+}
+
+/* .menu-box ol{
+    
+    margin-left: 26px;
+} */
+
+h4{
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(160, 114, 55);
+    padding: 20px;
+}
+
+/* --------------------------------------------- */
+/* ---------------- VIEW SECTION --------------- */
+/* --------------------------------------------- */
+
+.view-img{
+    width: 50%;
+    border-radius: 30px;
+    margin-left: 25%;
+    margin-top: 20px;
+    display: block;
+}
+
+.note-img{
+    margin-top: 50px;
+    text-align: justify;
+    margin-bottom: 40px;
+    float: right;
+}
+
+/* --------------------------------------------- */
+/* ---------------- COFFEE SECTION ------------- */
+/* --------------------------------------------- */
+
+.coffee-section{
+    background-image: linear-gradient(rgba(122,67,29,0.8),rgba(222,158,72,0.85)), url("../img/coffee-map1.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.coffee-box{
+    border: 3px solid #7a431d;
+    border-radius: 20px;
+    height: 460px;
+    margin-top: 50px;
+}
+
+.coffee-img{
+    border: 3px solid #372C2E;
+    width: 50%;
+    border-radius: 20px;
+    margin: 20px 0 0 20px;
+    display: inline;
+}
+
+.coffee-box p{
+    color: #d6c1a5;
+    text-align:justify;
+    font-size: 18px;
+    padding: 20px;
+}
+
+.title-coffee-box{
+    font-size: 25px;
+    
+    margin-left: 25px;
+    position: absolute;
+    top: 165px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: #372C2E;
+    border: 3px solid #7a431d;
+    padding: 0 10px 0 10px;
+}
+
+.title-coffee-box1{
+    font-size: 25px;
+    font-weight: 250%;
+    margin-left: 10px;
+    position: absolute;
+    top: 64px;
+    margin-left: 30px;
+    color: #372C2E;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 3px solid #7a431d;
+    padding: 0 10px 0 10px;
+}
+
+/* --------------------------------------------- */
+/* --------------- SERVICE SECTION ------------- */
+/* --------------------------------------------- */
+
+.service-box{
+    margin-top: 30px;
+}
+
+.service-box img{
+    width: 30%;
+    border-radius: 20px;
+    margin: 30px;
+    float: left;
+}
+
+.service-box p{
+    border: 3px solid brown;
+    border-radius: 50px;
+    margin-top: 20px;
+    width: 60%;
+    padding: 20px;
+    text-align:justify;
+    margin-left: 20px;
+    float: left;
+}
+
+.bida-service-box{
+    margin-top: 30px;
+}
+
+.bida-service-box img{
+    width: 30%;
+    border-radius: 20px;
+    margin: 50px;
+    float: right;
+}
+
+.bida-service-box p{
+    border: 3px solid brown;
+    border-radius: 50px;
+    margin-top: 20px;
+    padding: 20px;
+    width: 60%;
+    text-align: justify;
+    float: left;
+}
+
+.content-book h5{
+    width: 30%;
+    margin-top: 30px;
+    margin-left: 80px;
+    font-size: 25px;
+    float: left;
+}
+
+.content-bida h5{
+    width: 30%;
+    margin-top: 50px;
+    margin-left: 320px;
+    padding: 0 0 0 110px;
+    font-size: 25px;
+    float: left;
+}
+
+/* --------------------------------------------- */
+/* -------------- PRODUCTS SECTION ------------- */
+/* --------------------------------------------- */
+
+.product-section{
+    background-image: linear-gradient(rgba(122,67,29,0.8),rgba(222,158,72,0.85)), url("../img/backgroundtool-product1.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.pic-product{
+    position: relative;
+}
+
+.product-box img{
+    width: 300px;
+    border-radius: 20px;
+    border: 3px solid rgb(107, 68, 45);
+    position: relative;
+}
+
+.product-box p{
+    position: absolute;
+    color: #dba967;
+    left: 43%;
+    top: 50%;
+}
+
+.title-product{
+    padding: 50px 130px 20px 130px;
+    text-align: center;
+    color: #372C2E;;  
+}
+
+/* --------------------------------------------- */
+/* --------------- CONTACT SECTION ------------- */
+/* --------------------------------------------- */
+
+.information{
+    list-style: none;
+    line-height: 200%;
+    margin-top: 20px;
+    white-space: 1px;
+    font-size: 90%;
+}
+
+.information .small-icon{
+    color: #7a431d;
+}
+
+.information .small-icon:hover,
+.information .small-icon:active{
+    transform: scale(1.3);
+}
+
+.social-icons{    
+    margin-top: 50px;
+    list-style: none;
+
+}
+
+.social-icons li{
+    display: inline-block;
+    font-size: 230%;
+    margin-right: 40px;
+    color: #e0deda;
+}
+
+.social-icons li i{
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.social-icons li i:hover,
+.information li i:active{
+    transform: scale(1.3);
+    color: #563727;
+}
+
+/* --------------------------------------------- */
+/* ------------- REVIEW FORM SECTION ----------- */
+/* --------------------------------------------- */
+
+form{
+    background-image: linear-gradient(rgba(238, 149, 32, 0.1),rgba(184, 90, 23, 0.8)), url("../img/background-form.png");
+    margin-left: 30%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    width: 80%;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+label{
+    font-size: 150%;
+    color: #3a291e;
+}
+
+input, textarea{
+    outline: none;
+    padding: 20px;
+    width: 80%;
+    background-color: rgba(184, 90, 23, 0.2);
+    border: 1px solid rgba(122,67,29,0.8);
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+textarea{
+    resize: none;
+    height: 70px;
+}
+
+input{
+    height: 50px;
+}
+
+form .row:last-child{
+    text-align: center;
+}
+
+input[type=submit]{
+    font-size: 100%;
+    width: 40%;
+    border-radius: 80px;
+}
+
+input[type=text], textarea{
+    font-size:80%;
+    color: #af7845;
+}
+
+input[type=text]:focus, textarea:focus{
+    color: rgb(255, 255, 255);
+    background-color: rgba(66, 48, 23, 0.3);
+}
